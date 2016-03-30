@@ -969,4 +969,147 @@ FusionCharts.ready(function () {
             }
         }).render();
         
+        // Line Chart
+        var hourlySalesChart = new FusionCharts({
+            type: 'multiaxisline',
+            renderAt: 'line-chart',
+            width: '600',
+            height: '350',
+            dataFormat: 'json',
+            dataSource: {
+                "chart": {
+                	"caption": "CPU Usage",
+                    "subcaption": "(Last 10 Hours)",
+                    "baseFontColor" : "#333333",
+                    "baseFont" : "Helvetica Neue,Arial",
+                    "xaxisname": "Week of Year",
+                    "showvalues": "0",
+                    "numvdivlines": "2",
+                    "paletteColors" : "#0075c2,#1aaf5d,#f2c500,#f45b00",
+                    "bgColor" : "#ffffff",
+                    "canvasBgColor" : "#ffffff",                                 
+                    "captionFontSize" : "13",
+                    "subcaptionFontSize" : "13",
+                    "subcaptionFontBold" : "0",
+                    "showBorder" : "0",
+                    "showPlotBorder": "0",
+                    "showXAxisLine" : "1",
+                    "showShadow" : "0",
+                    "showCanvasBorder" : "0",
+                    "showAlternateHGridColor" : "0",
+                    "showalternatevgridcolor": "1",
+                    "usePlotGradientColor" :"0",
+                    "divlineColor" : "#999999",
+                    "divlineThickness" : "1",
+                    "divLineIsDashed" : "1",
+                    "divLineDashLen" : "1",
+                    "divLineGapLen" : "1",
+                    "xAxisLineThickness" : "1",
+                    "xAxisLineColor" : "#999999",
+                    "legendBorderAlpha": "0",
+                    "legendShadow": "0",
+                    "alignCaptionWithCanvas": "0",
+                    "exportEnabled" :"1"
+                },
+                "categories": [
+                    {
+                        "category": [
+                            { "label": "10:00" },
+                            { "label": "11:00" }, 
+                            { "label": "12:00" }, 
+                            { "label": "13:00" }, 
+                            { "label": "14:00" }, 
+                            { "label": "15:00" }, 
+                            { "label": "16:00" }, 
+                            { "label": "17:00" }, 
+                            { "label": "18:00" }, 
+                            { "label": "19:00" }
+                        ]
+                    }
+                ],
+                "axis": [
+                    {
+                        "title": "CPU Usage",
+                        "titlepos": "left",
+                        "tickwidth": "10",
+                        "numberPrefix": "%",
+                        "divlineisdashed": "1",
+                        "dataset": [
+                            {
+                                "seriesname": "CPU 1",
+                                "linethickness": "3",
+                                "color": "CC0000",
+                                "data": [
+                                    { "value": "16" }, 
+                                    { "value": "19" }, 
+                                    { "value": "16" }, 
+                                    { "value": "17" },
+                                    { "value": "23" }, 
+                                    { "value": "23" }, 
+                                    { "value": "15" }, 
+                                    { "value": "14" },
+                                    { "value": "19" }, 
+                                    { "value": "21" }
+                                ]
+                            }
+                        ]
+                    }, {
+                        "title": "PF Usage",
+                        "axisonleft": "0",
+                        "titlepos": "right",
+                        "numdivlines": "4",
+                        "tickwidth": "10",
+                        "divlineisdashed": "1",
+                        "formatnumberscale": "1",
+                        "defaultnumberscale": " MB",
+                        "numberscaleunit": "GB",
+                        "numberscalevalue": "1024",
+                        "dataset": [
+                            {
+                                "seriesname": "PF Usage",
+                                "data": [
+                                    { "value": "696" }, 
+                                    { "value": "711" }, 
+                                    { "value": "636" }, 
+                                    { "value": "671" }, 
+                                    { "value": "1293" }, 
+                                    { "value": "789" }, 
+                                    { "value": "793" }, 
+                                    { "value": "993" },
+                                    { "value": "657" }, 
+                                    { "value": "693" }
+                                ]
+                            }
+                        ]
+                    }, 
+                    {
+                        "title": "Processes",
+                        "titlepos": "RIGHT",
+                        "axisonleft": "0",
+                        "numdivlines": "5",
+                        "tickwidth": "10",
+                        "numberSuffix": "",
+                        "divlineisdashed": "1",
+                        "dataset": [
+                            {
+                                "seriesname": "Processes",
+                                "data": [
+                                    { "value": "543" }, 
+                                    { "value": "511" }, 
+                                    { "value": "536" }, 
+                                    { "value": "449" }, 
+                                    { "value": "668" }, 
+                                    { "value": "588" }, 
+                                    { "value": "511" }, 
+                                    { "value": "536" }, 
+                                    { "value": "449" }, 
+                                    { "value": "668" }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        }).render();
+        
 })
