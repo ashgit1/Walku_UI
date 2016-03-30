@@ -23,7 +23,8 @@ FusionCharts.ready(function () {
                 "legendshadow": "0",
                 "legendborderalpha": "0",
                 "xaxisname": "Time of the day (hrs)",
-                "showborder": "0"
+                "showborder": "0",
+                "exportEnabled" :"1"
             },
             "rows": {
                 "row": [

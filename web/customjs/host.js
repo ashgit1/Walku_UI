@@ -19,16 +19,17 @@ FusionCharts.ready(function () {
 					"showalternatehgridcolor" : "0",
 					"showplotborder" : "0",
 					"divlinecolor" : "CCCCCC",
-					"canvasborderalpha" : "0"
+					"canvasborderalpha" : "0",
+                    "exportEnabled" :"1"
 				},
 				"data" : [ {
 					"label" : "EDC",
-					"value" : "1000",
+					"value" : "700",
 					"link" : "newchart-xml-EDCHosts",
 					"color" : "008ee4"
 				}, {
 					"label" : "NDC",
-					"value" : "1000",
+					"value" : "800",
 					"link" : "newchart-xml-NDCHosts",
 					"color" : "6baa01"
 				}, {
@@ -38,7 +39,7 @@ FusionCharts.ready(function () {
 					"color" : "f8bd19"
 				}, {
 					"label" : "DFW",
-					"value" : "1000",
+					"value" : "900",
 					"link" : "newchart-xml-DFWHosts",
 					"color" : "e44a00"
 				} ],
@@ -58,7 +59,8 @@ FusionCharts.ready(function () {
 									"showalternatehgridcolor" : "0",
 									"showplotborder" : "0",
 									"divlinecolor" : "CCCCCC",
-									"canvasborderalpha" : "0"
+									"canvasborderalpha" : "0",
+				                    "exportEnabled" :"1"
 								},
 								"data" : [
 										{
@@ -75,7 +77,7 @@ FusionCharts.ready(function () {
 										},
 										{
 											"label" : "LINUX",
-											"value" : "600",
+											"value" : "300",
 											"link" : "newchart-xml-EDCLinux",
 											"color" : "008ee4"
 										},
@@ -101,7 +103,8 @@ FusionCharts.ready(function () {
 													"showalternatehgridcolor" : "0",
 													"showplotborder" : "0",
 													"divlinecolor" : "CCCCCC",
-													"canvasborderalpha" : "0"
+													"canvasborderalpha" : "0",
+								                    "exportEnabled" :"1"
 												},
 												"data" : [
 														{
@@ -136,7 +139,8 @@ FusionCharts.ready(function () {
 													"showalternatehgridcolor" : "0",
 													"showplotborder" : "0",
 													"divlinecolor" : "CCCCCC",
-													"canvasborderalpha" : "0"
+													"canvasborderalpha" : "0",
+								                    "exportEnabled" :"1"
 												},
 												"data" : [
 														{
@@ -171,22 +175,23 @@ FusionCharts.ready(function () {
 													"showalternatehgridcolor" : "0",
 													"showplotborder" : "0",
 													"divlinecolor" : "CCCCCC",
-													"canvasborderalpha" : "0"
+													"canvasborderalpha" : "0",
+								                    "exportEnabled" :"1"
 												},
 												"data" : [
 														{
 															"label" : "Ubuntu",
-															"value" : "200",
+															"value" : "150",
 															"color" : "008ee4"
 														},
 														{
 															"label" : "Redhat",
-															"value" : "300",
+															"value" : "100",
 															"color" : "008ee4"
 														},
 														{
 															"label" : "Fedora",
-															"value" : "100",
+															"value" : "50",
 															"color" : "008ee4"
 														} ]
 											}
@@ -206,7 +211,8 @@ FusionCharts.ready(function () {
 													"showalternatehgridcolor" : "0",
 													"showplotborder" : "0",
 													"divlinecolor" : "CCCCCC",
-													"canvasborderalpha" : "0"
+													"canvasborderalpha" : "0",
+								                    "exportEnabled" :"1"
 												},
 												"data" : [
 														{
@@ -241,7 +247,8 @@ FusionCharts.ready(function () {
 									"showalternatehgridcolor" : "0",
 									"showplotborder" : "0",
 									"divlinecolor" : "CCCCCC",
-									"canvasborderalpha" : "0"
+									"canvasborderalpha" : "0",
+				                    "exportEnabled" :"1"
 								},
 								"data" : [
 										{
@@ -258,7 +265,7 @@ FusionCharts.ready(function () {
 										},
 										{
 											"label" : "LINUX",
-											"value" : "600",
+											"value" : "400",
 											"link" : "newchart-xml-NDCLinux",
 											"color" : "008ee4"
 										},
@@ -284,7 +291,8 @@ FusionCharts.ready(function () {
 													"showalternatehgridcolor" : "0",
 													"showplotborder" : "0",
 													"divlinecolor" : "CCCCCC",
-													"canvasborderalpha" : "0"
+													"canvasborderalpha" : "0",
+								                    "exportEnabled" :"1"
 												},
 												"data" : [
 														{
@@ -318,7 +326,8 @@ FusionCharts.ready(function () {
 													"showalternatehgridcolor" : "0",
 													"showplotborder" : "0",
 													"divlinecolor" : "CCCCCC",
-													"canvasborderalpha" : "0"
+													"canvasborderalpha" : "0",
+								                    "exportEnabled" :"1"
 												},
 												"data" : [
 														{
@@ -351,22 +360,23 @@ FusionCharts.ready(function () {
 													"showalternatehgridcolor" : "0",
 													"showplotborder" : "0",
 													"divlinecolor" : "CCCCCC",
-													"canvasborderalpha" : "0"
+													"canvasborderalpha" : "0",
+								                    "exportEnabled" :"1"
 												},
 												"data" : [
 														{
 															"label" : "Ubuntu",
-															"value" : "200",
+															"value" : "150",
 															"color" : "008ee4"
 														},
 														{
 															"label" : "Redhat",
-															"value" : "300",
+															"value" : "200",
 															"color" : "008ee4"
 														},
 														{
 															"label" : "Fedora",
-															"value" : "100",
+															"value" : "50",
 															"color" : "008ee4"
 														} ]
 											}
@@ -385,7 +395,8 @@ FusionCharts.ready(function () {
 													"showalternatehgridcolor" : "0",
 													"showplotborder" : "0",
 													"divlinecolor" : "CCCCCC",
-													"canvasborderalpha" : "0"
+													"canvasborderalpha" : "0",
+								                    "exportEnabled" :"1"
 												},
 												"data" : [
 														{
@@ -422,7 +433,8 @@ FusionCharts.ready(function () {
 									"showalternatehgridcolor" : "0",
 									"showplotborder" : "0",
 									"divlinecolor" : "CCCCCC",
-									"canvasborderalpha" : "0"
+									"canvasborderalpha" : "0",
+				                    "exportEnabled" :"1"
 								},
 								"data" : [
 										{
@@ -465,7 +477,8 @@ FusionCharts.ready(function () {
 													"showalternatehgridcolor" : "0",
 													"showplotborder" : "0",
 													"divlinecolor" : "CCCCCC",
-													"canvasborderalpha" : "0"
+													"canvasborderalpha" : "0",
+								                    "exportEnabled" :"1"
 												},
 												"data" : [
 														{
@@ -500,7 +513,8 @@ FusionCharts.ready(function () {
 													"showalternatehgridcolor" : "0",
 													"showplotborder" : "0",
 													"divlinecolor" : "CCCCCC",
-													"canvasborderalpha" : "0"
+													"canvasborderalpha" : "0",
+								                    "exportEnabled" :"1"
 												},
 												"data" : [
 														{
@@ -535,7 +549,8 @@ FusionCharts.ready(function () {
 													"showalternatehgridcolor" : "0",
 													"showplotborder" : "0",
 													"divlinecolor" : "CCCCCC",
-													"canvasborderalpha" : "0"
+													"canvasborderalpha" : "0",
+								                    "exportEnabled" :"1"
 												},
 												"data" : [
 														{
@@ -570,7 +585,8 @@ FusionCharts.ready(function () {
 													"showalternatehgridcolor" : "0",
 													"showplotborder" : "0",
 													"divlinecolor" : "CCCCCC",
-													"canvasborderalpha" : "0"
+													"canvasborderalpha" : "0",
+								                    "exportEnabled" :"1"
 												},
 												"data" : [
 														{
@@ -608,7 +624,8 @@ FusionCharts.ready(function () {
 									"showalternatehgridcolor" : "0",
 									"showplotborder" : "0",
 									"divlinecolor" : "CCCCCC",
-									"canvasborderalpha" : "0"
+									"canvasborderalpha" : "0",
+				                    "exportEnabled" :"1"
 								},
 								"data" : [
 										{
@@ -625,7 +642,7 @@ FusionCharts.ready(function () {
 										},
 										{
 											"label" : "LINUX",
-											"value" : "600",
+											"value" : "500",
 											"link" : "newchart-xml-DFWLinux",
 											"color" : "008ee4"
 										},
@@ -651,7 +668,8 @@ FusionCharts.ready(function () {
 													"showalternatehgridcolor" : "0",
 													"showplotborder" : "0",
 													"divlinecolor" : "CCCCCC",
-													"canvasborderalpha" : "0"
+													"canvasborderalpha" : "0",
+								                    "exportEnabled" :"1"
 												},
 												"data" : [
 														{
@@ -686,7 +704,8 @@ FusionCharts.ready(function () {
 													"showalternatehgridcolor" : "0",
 													"showplotborder" : "0",
 													"divlinecolor" : "CCCCCC",
-													"canvasborderalpha" : "0"
+													"canvasborderalpha" : "0",
+								                    "exportEnabled" :"1"
 												},
 												"data" : [
 														{
@@ -721,7 +740,8 @@ FusionCharts.ready(function () {
 													"showalternatehgridcolor" : "0",
 													"showplotborder" : "0",
 													"divlinecolor" : "CCCCCC",
-													"canvasborderalpha" : "0"
+													"canvasborderalpha" : "0",
+								                    "exportEnabled" :"1"
 												},
 												"data" : [
 														{
@@ -731,7 +751,7 @@ FusionCharts.ready(function () {
 														},
 														{
 															"label" : "Redhat",
-															"value" : "300",
+															"value" : "200",
 															"color" : "008ee4"
 														},
 														{
@@ -756,7 +776,8 @@ FusionCharts.ready(function () {
 													"showalternatehgridcolor" : "0",
 													"showplotborder" : "0",
 													"divlinecolor" : "CCCCCC",
-													"canvasborderalpha" : "0"
+													"canvasborderalpha" : "0",
+								                    "exportEnabled" :"1"
 												},
 												"data" : [
 														{
@@ -813,7 +834,8 @@ FusionCharts.ready(function () {
                     "decimals": "0",
                     "captionFontSize": "10",
                     "subcaptionFontSize": "10",
-                    "subcaptionFontBold": "0"
+                    "subcaptionFontBold": "0",
+                    "exportEnabled" :"1"
                 },
                 "data": [
                     {
@@ -849,7 +871,8 @@ FusionCharts.ready(function () {
 					"subcaption" : "Last week",
 					"lowerLimit" : "0",
 					"upperLimit" : "100",
-					"theme" : "fint"
+					"theme" : "fint",
+                    "exportEnabled" :"1"
 				},
 				"colorRange" : {
 					"color" : [ {
@@ -894,7 +917,8 @@ FusionCharts.ready(function () {
                     "showPercentValues": "1",
                     "showPercentInTooltip": "0",
                     "plotTooltext": "$label<br>Total : $datavalue",
-                    "theme": "fint"
+                    "theme": "fint",
+                    "exportEnabled" :"1"
                 },
                 "data": [{
                     "label": "VM's",
@@ -926,7 +950,8 @@ FusionCharts.ready(function () {
                     "showPercentValues": "1",
                     "showPercentInTooltip": "0",
                     "plotTooltext": "$label<br>Total : $datavalue",
-                    "theme": "fint"
+                    "theme": "fint",
+                    "exportEnabled" :"1"
                 },
                 "data": [{
                     "label": "Chef",
