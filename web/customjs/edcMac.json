@@ -1,0 +1,19 @@
+[{
+	"server": "edcMacServer1.walmart.com",
+	"ip": "192.168.200.69"
+}, {
+	"server": "edcMacServer2.walmart.com",
+	"ip": "192.168.200.69"
+}, {
+	"server": "edcMacServer3.walmart.com",
+	"ip": "192.168.200.69"
+}, {
+	"server": "edcMacServer4.walmart.com",
+	"ip": "192.168.200.69"
+}, {
+	"server": "edcMacServer5.walmart.com",
+	"ip": "192.168.200.69"
+}, {
+	"server": "edcMacServer6.walmart.com",
+	"ip": "192.168.200.69"
+}]

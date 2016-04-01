@@ -1,0 +1,19 @@
+[{
+	"server": "edcUnixServer1.walmart.com",
+	"ip": "192.168.200.69"
+}, {
+	"server": "edcUnixServer2.walmart.com",
+	"ip": "192.168.200.69"
+}, {
+	"server": "edcUnixServer3.walmart.com",
+	"ip": "192.168.200.69"
+}, {
+	"server": "edcUnixServer4.walmart.com",
+	"ip": "192.168.200.69"
+}, {
+	"server": "edcUnixServer5.walmart.com",
+	"ip": "192.168.200.69"
+}, {
+	"server": "edcUnixxServer6.walmart.com",
+	"ip": "192.168.200.69"
+}]
