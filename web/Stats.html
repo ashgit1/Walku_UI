@@ -1,0 +1,377 @@
+<html>
+<head>
+<title>
+</title>
+<script src="customjs/Donut3D.js"></script>
+<script type="text/javascript" src="d3/d3.js"></script>
+<script type="text/javascript" src="d3/d3.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script type="text/javascript" src="customjs/heatmap.js"></script>
+<script src="customjs/d3pie.min.js"></script>
+<script type="text/javascript" src="d3/d3.min.js"></script>
+
+
+<script type="text/javascript">
+var url = document.URL;
+var id = url.substring(url.lastIndexOf('=') + 1);
+ //alert(id); // 234234234
+ document.write(id);
+//  var server=document.getElementById("show");
+//  server.innerHTML=id;
+
+</script>
+
+
+<style type="text/css">
+
+body {
+	background: #fafafa ;
+	color: #444;
+	font: 100%/30px 'Helvetica Neue', helvetica, arial, sans-serif;
+	text-shadow: 0 1px 0 #fff;
+}
+
+strong {
+	font-weight: bold; 
+}
+
+em {
+	font-style: italic; 
+}
+
+table {
+	background: #f5f5f5;
+	border-collapse: separate;
+	box-shadow: inset 0 1px 0 #fff;
+	font-size: 12px;
+	line-height: 24px;
+	margin: 30px auto;
+	text-align: left;
+	width: 400px;
+}	
+
+th {
+	background: linear-gradient(#777, #444);
+	border-left: 1px solid #555;
+	border-right: 1px solid #777;
+	border-top: 1px solid #555;
+	border-bottom: 1px solid #333;
+	box-shadow: inset 0 1px 0 #999;
+	color: #fff;
+  font-weight: bold;
+	padding: 10px 15px;
+	position: relative;
+	text-shadow: 0 1px 0 #000;	
+}
+
+th:after {
+	background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,.08));
+	content: '';
+	display: block;
+	height: 25%;
+	left: 0;
+	margin: 1px 0 0 0;
+	position: absolute;
+	top: 25%;
+	width: 50%;
+}
+
+th:first-child {
+	border-left: 1px solid #777;	
+	box-shadow: inset 1px 1px 0 #999;
+}
+
+th:last-child {
+	box-shadow: inset -1px 1px 0 #999;
+}
+
+td {
+	border-right: 1px solid #fff;
+	border-left: 1px solid #e8e8e8;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #e8e8e8;
+	padding: 10px 15px;
+	position: relative;
+	transition: all 300ms;
+}
+
+td:first-child {
+	box-shadow: inset 1px 0 0 #fff;
+}	
+
+td:last-child {
+	border-right: 1px solid #e8e8e8;
+	box-shadow: inset -1px 0 0 #fff;
+}	
+
+
+
+tr:last-of-type td {
+	box-shadow: inset 0 -1px 0 #fff; 
+}
+
+tr:last-of-type td:first-child {
+	box-shadow: inset 1px -1px 0 #fff;
+}	
+
+tr:last-of-type td:last-child {
+	box-shadow: inset -1px -1px 0 #fff;
+}	
+
+tbody:hover td {
+	color: transparent;
+	text-shadow: 0 0 3px #aaa;
+}
+
+tbody:hover tr:hover td {
+	color: #444;
+	text-shadow: 0 1px 0 #fff;
+}
+
+path.slice{
+	stroke-width:2px;
+}
+polyline{
+	opacity: .3;
+	stroke: black;
+	stroke-width: 2px;
+	fill: none;
+} 
+svg text.percent{
+	fill:white;
+	text-anchor:middle;
+	font-size:12px;
+}
+rect.bordered {
+	stroke: #E6E6E6;
+	stroke-width: 2px;
+}
+
+text.mono {
+	font-size: 9pt;
+	font-family: Consolas, courier;
+	fill: #aaa;
+}
+</style>
+</head>
+<body >
+<form name="form">
+ <div id='header' style=" position: absolute;left:80px;">
+        <div id=''>
+            <img src="images/header.JPG" alt='Logo' />
+        </div>
+        <div></div>
+    </div>
+       
+        <div style="position:absolute;float:left;top:900px;left:800px;">
+<p id="show" ></p>
+
+
+    </div>
+    <div style="position:absolute;float:left;top:20%;left:80px;">
+    Reports from the last <select >
+<optgroup label="Action">
+<option>1</option>
+<option>2</option>
+<option>3</option>
+</optgroup>
+</select> days .4 reports found.
+    </div>
+
+<div style="position:absolute;float:left;top:16%;left:890px;">
+<input type="button" value="edit">
+<input type="button" value="Build">
+<input type="button" value="Power OFF">
+<input type="button" value="Console">
+<input type="button" value="Run puppet">
+<input type="button" value="Delete">
+
+</div>
+
+<div id="view" style="position:absolute;float:left;top:70px;left:80px;">
+<table>
+  <thead>
+    <tr>
+      <th colspan="5">Details</th>
+    </tr>
+    <tr>
+      <th colspan="5" ><input type="button" value="audit"><input type="button" value="Facts"><input type="button" value="Reports"><input type="button" value="YAML">   </th>
+  
+    </tr>
+  </thead>
+  <tbody>
+    <tr >
+    
+      <td>properties</td>
+      <td>metrics </td>
+      <td>Templates</td>
+       <td>VM</td>
+       <td>NIC</td>
+       
+    </tr>
+    
+  </tbody>
+</table>
+</div>
+
+<div id="chart" style=" position: absolute;left:590px;top:110%;"><font size="4px"><b>CPU Utilization % by time over the week</b></font></div>
+
+<div id="donutChart" style=" position: absolute;left:590px;top: 30%;"></div>
+
+<script>
+var pie = new d3pie("donutChart", {
+	"header": {
+		"title": {
+			"text": "HOST Up/Down",
+			"fontSize": 24,
+			"font": "open sans"
+		},
+		"subtitle": {
+			"text": "HOST Up/Down",
+			"color": "#999999",
+			"fontSize": 12,
+			"font": "open sans"
+		},
+		"titleSubtitlePadding": 9
+	},
+	"footer": {
+		"color": "#999999",
+		"fontSize": 10,
+		"font": "open sans",
+		"location": "bottom-right"
+	},
+	"size": {
+		"canvasWidth": 590,
+		"pieInnerRadius": "60%",
+		"pieOuterRadius": "79%"
+	},
+	"data": {
+		"sortOrder": "value-desc",
+		"smallSegmentGrouping": {
+			"enabled": true,
+			"value": 0
+		},
+		"content": [
+			{
+				"label": "Hostup",
+				"value": 178327,
+				"color": "green"
+			},
+			{
+				"label": "Host down",
+				"value": 17706,
+				"color": "red"
+			},
+			
+		]
+	},
+	"labels": {
+		"outer": {
+			"pieDistance": 32
+		},
+		"inner": {
+			"hideWhenLessThanPercentage": 3
+		},
+		"mainLabel": {
+			"fontSize": 11
+		},
+		"percentage": {
+			"color": "#ffffff",
+			"decimalPlaces": 0
+		},
+		"value": {
+			"color": "#adadad",
+			"fontSize": 11
+		},
+		"lines": {
+			"enabled": true
+		},
+		"truncation": {
+			"enabled": true
+		}
+	},
+	"effects": {
+		"pullOutSegmentOnClick": {
+			"speed": 400,
+			"size": 8
+		}
+	},
+	"misc": {
+		"gradient": {
+			"enabled": true,
+			"percentage": 100
+		}
+	}
+});
+</script>
+<div id="data" style="position:absolute;float:left;top:250px;left:80px;">
+<table>
+  <thead>
+    <tr>
+      <th>Properties</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Domain</strong></td>
+
+      <td>Walmart.com</td>
+    </tr>
+    <tr>
+      <td><strong>Realm</strong></td>
+
+      <td></td>
+    </tr>
+    <tr>
+      <td><strong>IP Address</strong></td>
+
+      <td>192.168.122.64</td>
+    </tr>
+    <tr>
+      <td><strong>MAC Address</strong></td>
+
+      <td>52:52:00:e4:25:90</td>
+    </tr>					
+    <tr>
+      <td><strong>Puppet Enviornment</strong></td>
+
+      <td>development</em></td>
+    </tr>
+    <tr>
+      <td><strong>Host Architecture</strong></td>
+    
+      <td>x86_64</td>
+    </tr>
+    <tr>
+      <td><strong>operating system</strong></td>
+        <td>CentOS 7.0</td>
+    </tr>
+    <tr>
+      <td><strong>Host Group</strong></td>
+    
+      <td>puppet_managed</td>
+    </tr>
+    <tr>
+      <td><strong>Location</strong></td>
+   
+      <td>Brno</td>
+    </tr>
+     <tr>
+      <td><strong>Organization</strong></td>
+   
+      <td>Ares</td>
+    </tr>
+     <tr>
+      <td><strong>Owner</strong></td>
+   
+      <td>Admin user</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</form>
+
+
+</body>
+</html>

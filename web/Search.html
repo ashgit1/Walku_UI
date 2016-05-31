@@ -1,0 +1,176 @@
+<html>
+<head>
+<title>Search Page</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script>
+	function Hide() {
+		var anchor1 = document.getElementById("link1");
+		anchor1.style.display = "none";
+	}
+	
+	function showHide() {
+		var anchor1 = document.getElementById("link1");
+		if (document.getElementById('click1').checked
+				|| document.getElementById('click2').checked
+				|| document.getElementById('click3').checked) {
+			anchor1.style.display = "inline";
+		} else {
+			anchor1.style.display = "none";
+		}
+	}
+	
+	$(document).ready(function(){
+		
+		
+
+		function appendServerId(e) {
+			e.href = e.href + "?server=" + document.getElementById('server1').value;
+		}
+	});
+	
+	
+</script>
+<style type="text/css">
+legend {
+	display: block;
+	padding-left: 2px;
+	padding-right: 2px;
+	border: none;
+}
+
+fieldset {
+	border: 1px dotted #61B5CF;
+	margin-top: 1.4em;
+	padding: 0.6em;
+	float: left;
+	width: 40%;
+}
+
+.styleSelect select {
+	background: transparent;
+	width: 168px;
+	padding: 5px;
+	font-size: 16px;
+	line-height: 1;
+	border: 0;
+	border-radius: 0;
+	height: 34px;
+	-webkit-appearance: none;
+	color: #000;
+}
+
+.styleSelect {
+	width: 140px;
+	height: 34px;
+	overflow: hidden;
+	/* background: url("images/downArrow.png") no-repeat right #fff; */
+	border: 2px solid #000;
+}
+
+.btn:hover {
+	background-image: none;
+	background-color: orange;
+}
+</style>
+</head>
+<body onload="Hide()">
+	<div id='header' style="position: absolute; left: 80px;">
+		<div id=''>
+			<img src="images/header.JPG" alt='Logo' />
+		</div>
+		<div></div>
+	</div>
+	<form action="" name="server">
+
+		<fieldset id="link1"
+			style="width: 5%; float: left; position: absolute; left: 41%; top: 8%; margin-left: 19%; margin-right: 2%;">
+			<legend>Action</legend>
+			<strong> <select class="styleSelect">
+					<optgroup label="Action">
+						<option>Start</option>
+						<option>Stop</option>
+						<option>Reboot</option>
+					</optgroup>
+			</select><br>
+			<br> <input type='button'
+				class='btn btn-default btn-success btn-lg' value='Submit' />
+			</strong>
+
+		</fieldset>
+
+
+		<fieldset
+			style="float: left; position: absolute; top: 25%; margin-left: 10%; margin-right: 2%;">
+			<legend>Stats</legend>
+
+			<TABLE WIDTH="1000px" class="table">
+
+				<Thead>
+					<tr ALIGN="left" VALIGN="middle">
+						<Td></Td>
+						<th>HOSTNAME</th>
+						<th>OS</th>
+						<th>VENDER</th>
+						<th>SERVER<br> MODEL
+						</th>
+						<th>Server Info</th>
+						<th>Status</th>
+					</tr>
+				</Thead>
+				<TR ALIGN="left" VALIGN="middle">
+					<td><input type="checkbox" name="vehicle" id="click1"
+						onclick="showHide();"></td>
+					<TD><input type="label" id="server1"
+						value="dal-cappblx068-19.prod.walmart.com"></TD>
+					<TD><img src="images/redhat.png" alt='status' height=30
+						width=30 /></TD>
+					<TD><img src="images/unknown.png" alt='status' height=30
+						width=30 /></TD>
+					<TD><img src="images/unknown.png" alt='status' height=30
+						width=30 /></TD>
+					<TD><a
+						href="Stats.html?server=dal-cappblx068-19.prod.walmart.com"
+						id="link">IOLINE</a></TD>
+					<TD><img src="images/green.jpg" alt='status' height=30
+						width=30 /></TD>
+				</TR>
+				<TR ALIGN="left" VALIGN="middle">
+					<td><input type="checkbox" name="vehicle" id="click2"
+						onclick="showHide();"></td>
+					<TD><input type="label" id="server2"
+						value="dal-cappblx068-21.prod.walmart.com"></TD>
+					<TD><img src="images/redhat.png" alt='status' height=30
+						width=30 /></TD>
+					<TD><img src="images/unknown.png" alt='status' height=30
+						width=30 /></TD>
+					<TD><img src="images/unknown.png" alt='status' height=30
+						width=30 /></TD>
+					<td><a
+						href="Stats.html?server=dal-cappblx068-21.prod.walmart.com"
+						id="link">IOLINE</a></td>
+					<TD><img src="images/red.jpg" alt='status' height=30 width=30 /></TD>
+				</TR>
+				<TR ALIGN="left" VALIGN="middle">
+					<td><input type="checkbox" name="vehicle" id="click3"
+						onclick="showHide();"></td>
+					<TD><input type="label" id="server3"
+						value="dal-dacdelx068-22.prod.walmart.com"></TD>
+					<TD><img src="images/redhat.png" alt='status' height=30
+						width=30 /></TD>
+					<TD><img src="images/unknown.png" alt='status' height=30
+						width=30 /></TD>
+					<TD><img src="images/unknown.png" alt='status' height=30
+						width=30 /></TD>
+					<td><a
+						href="Stats.html?server=dal-dacdelx068-22.prod.walmart.com"
+						id="link">IOLINE</a></td>
+					<TD><img src="images/green.jpg" alt='status' height=30
+						width=30 /></TD>
+				</TR>
+
+			</TABLE>
+
+		</fieldset>
+	</form>
+</body>
+</html>
